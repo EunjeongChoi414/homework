@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Yeon+Sung&display=swap"
+          rel="stylesheet">
+    <title>My Potion</title>
+    <style>
+        * {
+            font-family: 'Nanum Brush Script', cursive;
+            font-family: 'Yeon Sung', cursive;
+        }
+
+        .img_potion1 {
+            background-image: url("https://i.pinimg.com/originals/7b/d0/82/7bd0824b3a6a51561c0e9cd8a7545266.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 500px;
+            height: 450px;
+            margin: auto;
+        }
+
+        .product_info {
+            width: 500px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            display: inline-block;
+        }
+
+        .price {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .customer_info {
+            width: 500px;
+            height: 200px;
+            margin: auto;
+        }
+
+        .order {
+            width: 500px;
+            margin: auto;
+        }
+
+        .order_button {
+            width: 55px;
+            margin: 10px auto;
+        }
+    </style>
+    <script>
+        function order() {
+            alert("주문이 완료되었습니다.")
+        }
+
+    </script>
+</head>
+<body>
+<div>
+    <div class="img_potion1"></div>
+    <div class="product_info">
+        <h1>포션을 팝니다</h1>
+        <p class="price">가격: 1,000,000원 / 개</p>
+        <p>이 상품으로 말할 것 같으면 용왕이 찾지 못한 토끼의 간을 찾아 빨간망토의 늑대와
+            아기 돼지 삼형제의 숨결이 고루 녹아 있는, 먹으면 120세까지 살 수 있다는 포션이다.</p>
+    </div>
+    <div class="order">
+        <h1>주문하기</h1>
+        <div class="customer_info">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">주문자 성함</span>
+                </div>
+                <input type="text" class="form-control" placeholder="" aria-label=""
+                       aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">수량</span>
+                </div>
+                <select class="custom-select">
+                    <option selected>--수량을 선택하세요--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">주소</span>
+                </div>
+                <input type="text" class="form-control" placeholder="" aria-label=""
+                       aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">전화번호</span>
+                </div>
+                <input type="text" class="form-control" placeholder="" aria-label=""
+                       aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="order_button">
+            <button onclick="order()" type="button" class="btn btn-primary">주문하기</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
