@@ -16,7 +16,6 @@ for music in music_lists:
     title = music.select_one("td.info > a.title.ellipsis").text.strip()
     artist = music.select_one("td.info > a.artist.ellipsis").text
     print(rank, title, artist)
-
     genie_chart = {
         'rank' : rank,
         'title' : title,
