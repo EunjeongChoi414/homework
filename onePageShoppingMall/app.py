@@ -21,15 +21,17 @@ def save_order():
     amount_receive = request.form['amount_give']
     address_receive = request.form['address_give']
     phone_receive = request.form['phone_give']
+
     order = {
         'name':name_receive,
         'amount': amount_receive,
         'address': address_receive,
         'phone': phone_receive
     }
-    db.order_list.insert_one(order)
-    return jsonify({'result': 'success', 'msg': "잘 저장되었습니다"})
 
+    db.order_list.insert_one(order)
+
+    return jsonify({'result': 'success'})
 
 # 주문 목록보기(Read) API
 @app.route('/order', methods=['GET'])

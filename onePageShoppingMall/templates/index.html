@@ -77,30 +77,30 @@
             if (name == '') {
                 alert("이름을 입력해주세요");
                 $("#order-name").focus();
-                return;
+                return
             } else if (count == '') {
                 alert("수량을 입력해주세요");
                 $("#order-count").focus();
-                return;
+                return
             } else if (address == '') {
                 alert("주소를 입력해주세요");
                 $("#order-address").focus();
-                return;
+                return
             } else if (phone == '') {
                 alert("전화번호를 입력해주세요");
                 $("#order-phone").focus();
-                return;
+                return
             } else if (phone) {
                 phoneCheck(phone);
             }
-
-            makeOrderList(name, count, address, phone);
 
             $.ajax({
                 type: "POST",
                 url: "/order",
                 data: {name_give: name, amount_give: count, address_give: address, phone_give: phone},
-                success: function (response){}
+                success: function (response){
+                    window.location.reload();
+                }
             })
         }
 
